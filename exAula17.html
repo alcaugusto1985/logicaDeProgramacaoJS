@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lógida de programação com Javascript</title>
+	<meta charset=utf-8>
+</head>
+<body>
+	<h1>Lógica de programação com Javascript</h1>
+
+	<script type="text/javascript">
+		//número do jogador 1
+		var jogador1 = prompt('Número do jogador 1:');
+		jogador1 = parseInt(jogador1);
+
+		//número do jogador 2
+		var jogador2 = prompt('Número do jogador 2:');
+		jogador2 = parseInt(jogador2);
+
+		// em caso de empate
+		if (jogador1 === jogador2) {
+			alert("Empate");
+		} else {
+
+			//sorteio de 0 ou 1
+			var sorteio = parseInt(Math.random() * 2);
+			alert("O número sorteado é: " + sorteio);
+
+			if (sorteio === 0 && jogador1 < jogador2 || sorteio === 1 && jogador1 > jogador2) {
+				alert("Jogador 1 venceu");
+			} else {
+				alert("Jogador 2  venceu");
+			}
+		}
+
+	</script>
+    	
+</body>
+</html>
